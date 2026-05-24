@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>200 Recetas para Diabéticos | Come Rico y Controla tu Glucosa</title>
+  <meta name="description" content="200 recetas deliciosas para diabéticos. Come rico, controla tu glucosa y disfruta cada comida sin sentirte excluido." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: #fff;
+      color: #2d2d2d;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+    .container { max-width: 700px; margin: 0 auto; padding: 0 24px; }
+
+    /* Badge */
+    .badge {
+      display: inline-block;
+      background: #e8f5e9;
+      color: #2e7d32;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    /* Buttons */
+    .btn-cta {
+      display: inline-block;
+      background: linear-gradient(135deg, #2e7d32, #43a047);
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      padding: 16px 36px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(46,125,50,0.35);
+      margin: 8px 4px;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .btn-cta:hover { transform: scale(1.03); box-shadow: 0 6px 28px rgba(46,125,50,0.45); }
+
+    .btn-cta-light {
+      display: inline-block;
+      background: linear-gradient(135deg, #b9f6ca, #69f0ae);
+      color: #1b5e20;
+      font-family: 'Nunito', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      padding: 16px 36px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(105,240,174,0.4);
+      margin: 8px 4px;
+      transition: transform .15s;
+    }
+    .btn-cta-light:hover { transform: scale(1.03); }
+
+    .btn-sec {
+      display: block;
+      color: #2e7d32;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: underline;
+      cursor: pointer;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    /* Divider */
+    .divider {
+      height: 3px;
+      background: linear-gradient(90deg, #a5d6a7, #66bb6a, #a5d6a7);
+      max-width: 80px;
+      margin: 12px auto 24px;
+      border-radius: 4px;
+    }
+
+    /* Section */
+    .section { padding: 56px 24px; }
+    .section-title {
+      font-size: 30px;
+      font-weight: 800;
+      color: #1b5e20;
+      text-align: center;
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+    .section-center { text-align: center; }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(160deg, #e8f5e9 0%, #f9fbe7 60%, #fff 100%);
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 36px;
+      color: #1b5e20;
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: #2e7d32;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .hero-desc {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 28px;
+    }
+    .hero-box {
+      background: #fff;
+      border: 2px solid #a5d6a7;
+      border-radius: 16px;
+      padding: 22px 24px;
+      display: inline-block;
+      margin-bottom: 28px;
+      text-align: left;
+      max-width: 480px;
+      width: 100%;
+    }
+    .hero-box-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #2e7d32;
+      margin-bottom: 14px;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+
+    /* Check items */
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin: 10px 0;
+      font-size: 15px;
+    }
+    .check-icon { color: #43a047; font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+
+    /* Problem boxes */
+    .problem-box {
+      background: #fff8e1;
+      border-left: 4px solid #ffb300;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 14px 0;
+      font-size: 15px;
+      color: #444;
+    }
+
+    /* Reveal boxes */
+    .reveal-box {
+      background: #f9fbe7;
+      border: 1.5px dashed #aed581;
+      border-radius: 10px;
+      padding: 24px 22px;
+      margin: 16px 0;
+      position: relative;
+      overflow: hidden;
+      min-height: 90px;
+    }
+    .blur-text {
+      filter: blur(5px);
+      user-select: none;
+      color: #555;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+    .blur-label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255,255,255,0.95);
+      color: #2e7d32;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 8px 20px;
+      border-radius: 20px;
+      border: 1.5px solid #66bb6a;
+      white-space: nowrap;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    /* Number cards */
+    .numbers-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 12px;
+    }
+    .number-card {
+      background: #e8f5e9;
+      border-radius: 12px;
+      padding: 20px 18px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+    .num-big {
+      font-family: 'Playfair Display', serif;
+      font-size: 44px;
+      font-weight: 800;
+      color: #2e7d32;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .num-label { font-size: 14px; color: #444; }
+
+    /* Testimonials */
+    .testimonial {
+      background: #fff;
+      border: 1.5px solid #c8e6c9;
+      border-radius: 12px;
+      padding: 20px 22px;
+      margin: 14px 0;
+    }
+    .stars { color: #ffc107; font-size: 18px; margin-bottom: 8px; }
+    .testimonial p { font-size: 15px; color: #333; font-style: italic; }
+    .author { font-size: 13px; color: #777; margin-top: 12px; font-weight: 700; font-style: normal; }
+
+    /* Price box */
+    .price-box {
+      background: #1b5e20;
+      color: #fff;
+      border-radius: 16px;
+      padding: 32px 28px;
+      text-align: center;
+      margin: 24px 0;
+    }
+    .price-old {
+      font-size: 18px;
+      text-decoration: line-through;
+      color: #a5d6a7;
+      margin-bottom: 6px;
+    }
+    .price-new {
+      font-family: 'Playfair Display', serif;
+      font-size: 60px;
+      font-weight: 800;
+      color: #b9f6ca;
+      line-height: 1.1;
+    }
+    .price-sub { font-size: 13px; color: #c8e6c9; margin-top: 8px; margin-bottom: 20px; }
+    .price-badges {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    .price-badge { font-size: 13px; color: #c8e6c9; }
+
+    /* Guarantee */
+    .guarantee {
+      background: #e8f5e9;
+      border: 2px solid #66bb6a;
+      border-radius: 14px;
+      padding: 24px;
+      text-align: center;
+      margin: 20px 0;
+    }
+    .guarantee-icon { font-size: 44px; margin-bottom: 10px; }
+    .guarantee h3 {
+      font-size: 20px;
+      font-weight: 800;
+      color: #1b5e20;
+      margin-bottom: 10px;
+    }
+    .guarantee p { font-size: 14px; color: #444; }
+
+    /* FAQ */
+    .faq-item { border-bottom: 1px solid #e0e0e0; padding: 18px 0; }
+    .faq-q { font-weight: 700; color: #1b5e20; font-size: 15px; margin-bottom: 8px; }
+    .faq-a { font-size: 14px; color: #555; }
+
+    /* CTA final */
+    .cta-final {
+      background: #1b5e20;
+      padding: 60px 24px;
+      text-align: center;
+    }
+    .cta-final h2 {
+      font-size: 30px;
+      color: #b9f6ca;
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+    .cta-final p { color: #a5d6a7; font-size: 15px; margin-bottom: 30px; }
+    .cta-footer { margin-top: 18px; color: #81c784; font-size: 13px; }
+
+    /* Backgrounds alternos */
+    .bg-green-light { background: #f1f8e9; }
+    .bg-yellow-light { background: #f9fbe7; }
+    .bg-white { background: #fff; }
+    .bg-green-section { background: #e8f5e9; }
+
+    /* Footer */
+    footer {
+      background: #0a3d0a;
+      color: #81c784;
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+    }
+    footer a { color: #a5d6a7; text-decoration: underline; }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 28px; }
+      .section-title { font-size: 24px; }
+      .numbers-grid { grid-template-columns: 1fr 1fr; }
+      .num-big { font-size: 36px; }
+      .price-new { font-size: 48px; }
+      .btn-cta, .btn-cta-light { font-size: 15px; padding: 14px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="badge">⭐ +2,000 personas ya lo tienen</div>
+      <h1>200 Recetas Deliciosas<br>para Diabéticos</h1>
+      <p class="hero-sub">Come rico, controla tu glucosa y disfruta cada comida — sin sentirte excluido.</p>
+      <p class="hero-desc">La guía completa que nadie te explicó sobre cómo comer bien viviendo con diabetes.</p>
+
+      <div style="display:flex; justify-content:center;">
+        <div class="hero-box">
+          <div class="hero-box-title">✨ LO QUE ENCONTRARÁS ADENTRO:</div>
+          <div class="check-item"><span class="check-icon">✅</span><span>200 recetas listas, probadas y deliciosas</span></div>
+          <div class="check-item"><span class="check-icon">✅</span><span>Desayunos, almuerzos, cenas y postres</span></div>
+          <div class="check-item"><span class="check-icon">✅</span><span>Sin ingredientes raros ni dietas aburridas</span></div>
+          <div class="check-item"><span class="check-icon">✅</span><span>Fáciles de preparar, con pocos ingredientes</span></div>
+        </div>
+      </div>
+
+      <!-- ⚠️ REEMPLAZÁ el # por el link de tu pago (Gumroad, Hotmart, PayPal) -->
+      <a href="#" class="btn-cta">🛒 Quiero mis 200 Recetas Ahora</a>
+      <a href="#precio" class="btn-sec">↓ Ver todo lo que incluye</a>
+    </div>
+  </section>
+
+  <!-- ===== PROBLEMA ===== -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="badge">El problema real</div>
+      <h2 class="section-title">¿Te identificas con esto?</h2>
+      <div class="divider"></div>
+      <div class="problem-box">😞 "No sé qué puedo comer sin que se me dispare el azúcar."</div>
+      <div class="problem-box">😞 "Sigo las mismas 5 recetas y ya me aburrí de comer lo mismo."</div>
+      <div class="problem-box">😞 "En reuniones familiares no puedo comer nada de lo que sirven."</div>
+      <div class="problem-box">😞 "Tengo diabetes pero también quiero disfrutar la comida."</div>
+      <p style="margin-top:20px; font-size:15px; color:#444;">Si alguna de esas frases te suena familiar... <strong>este ebook fue creado exactamente para ti.</strong></p>
+    </div>
+  </section>
+
+  <!-- ===== SECRETOS / INTRIGA ===== -->
+  <section class="section bg-green-light">
+    <div class="container section-center">
+      <div class="badge">Solo dentro del ebook</div>
+      <h2 class="section-title">Secretos que descubrirás adentro</h2>
+      <div class="divider"></div>
+
+      <div class="reveal-box">
+        <div class="blur-text">
+          El ingrediente común en tu cocina que puedes usar para reemplazar el azúcar sin alterar el sabor. La mayoría no sabe que existe y está en el supermercado más cercano. Una vez que lo conozcas no podrás creer que no lo usabas antes...
+        </div>
+        <div class="blur-label">🔒 Descúbrelo adentro</div>
+      </div>
+
+      <div class="reveal-box">
+        <div class="blur-text">
+          La técnica de preparación que reduce hasta un 35% el índice glucémico de los alimentos — y que aplican nutricionistas pero nunca te enseñan en internet. Simple, rápida y funciona con cualquier receta...
+        </div>
+        <div class="blur-label">🔒 Solo en el ebook</div>
+      </div>
+
+      <div class="reveal-box">
+        <div class="blur-text">
+          El postre que puedes comer SIN culpa, con 3 ingredientes, que no sube el azúcar y sabe increíble. Tu familia también lo va a querer. La receta completa está en la página 47...
+        </div>
+        <div class="blur-label">🔒 Receta exclusiva</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NÚMEROS ===== -->
+  <section class="section bg-white">
+    <div class="container section-center">
+      <div class="badge">Esto en números</div>
+      <h2 class="section-title">Todo lo que incluye el ebook</h2>
+      <div class="divider"></div>
+      <div class="numbers-grid">
+        <div class="number-card"><div class="num-big">200</div><div class="num-label">recetas completas paso a paso</div></div>
+        <div class="number-card"><div class="num-big">7</div><div class="num-label">categorías de comida cubiertas</div></div>
+        <div class="number-card"><div class="num-big">30</div><div class="num-label">postres sin azúcar añadida</div></div>
+        <div class="number-card"><div class="num-big">5</div><div class="num-label">min. promedio de preparación</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIOS ===== -->
+  <section class="section bg-yellow-light">
+    <div class="container section-center">
+      <div class="badge">Lo que dicen ellas y ellos</div>
+      <h2 class="section-title">Personas reales, resultados reales</h2>
+      <div class="divider"></div>
+      <div class="testimonial" style="text-align:left;">
+        <div class="stars">★★★★★</div>
+        <p>"Llevaba años comiendo lo mismo y sintiéndome culpable en cada comida. Con este ebook descubrí que puedo comer rico, variado y sin miedo. ¡Mis valores de glucosa mejoraron notablemente!"</p>
+        <div class="author">— Carmen R., 58 años · Diabética tipo 2</div>
+      </div>
+      <div class="testimonial" style="text-align:left;">
+        <div class="stars">★★★★★</div>
+        <p>"Lo que más me gustó es que las recetas son simples, con ingredientes de verdad. Mi familia también las come y ni se dan cuenta que son para diabéticos."</p>
+        <div class="author">— Miguel A., 45 años · Prediabetes</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PARA QUIÉN ES ===== -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="badge">¿Para quién es esto?</div>
+      <h2 class="section-title">Este ebook es para ti si...</h2>
+      <div class="divider"></div>
+      <div class="check-item"><span class="check-icon">✅</span><span>Tienes diabetes tipo 1 o tipo 2 y quieres comer mejor</span></div>
+      <div class="check-item"><span class="check-icon">✅</span><span>Eres familiar o cuidador de alguien con diabetes</span></div>
+      <div class="check-item"><span class="check-icon">✅</span><span>Te diagnosticaron prediabetes y quieres prevenir</span></div>
+      <div class="check-item"><span class="check-icon">✅</span><span>Estás cansado/a de comer sin sabor y quieres variedad</span></div>
+      <div class="check-item"><span class="check-icon">✅</span><span>Buscas recetas fáciles, sin ingredientes costosos ni raros</span></div>
+      <p style="margin-top:20px; font-size:14px; color:#888; font-style:italic;">❌ No es para ti si buscas una solución mágica sin esfuerzo — aquí hay compromiso con tu salud.</p>
+    </div>
+  </section>
+
+  <!-- ===== PRECIO + GARANTÍA ===== -->
+  <section class="section bg-green-section" id="precio">
+    <div class="container section-center">
+      <div class="badge">Acceso inmediato</div>
+      <h2 class="section-title">Obtén tus 200 recetas hoy</h2>
+      <div class="divider"></div>
+
+      <div class="price-box">
+        <div class="price-old">Precio regular: $29.99</div>
+        <div class="price-new">$9.99</div>
+        <div class="price-sub">Pago único · Acceso de por vida · PDF descargable</div>
+        <!-- ⚠️ REEMPLAZÁ el # por tu link de pago -->
+        <a href="#" class="btn-cta-light">⬇️ Descargar ahora por $9.99</a>
+        <div class="price-badges">
+          <span class="price-badge">🔒 Pago seguro</span>
+          <span class="price-badge">📧 Entrega inmediata</span>
+          <span class="price-badge">📱 Funciona en celular</span>
+        </div>
+      </div>
+
+      <div class="guarantee">
+        <div class="guarantee-icon">🛡️</div>
+        <h3>Garantía de 7 días sin preguntas</h3>
+        <p>Si en los próximos 7 días sientes que no fue lo que esperabas, te devolvemos el 100% de tu dinero. Sin formularios, sin explicaciones. Solo escríbenos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="badge">Dudas frecuentes</div>
+      <h2 class="section-title">Preguntas frecuentes</h2>
+      <div class="divider"></div>
+      <div class="faq-item">
+        <div class="faq-q">¿Cómo recibo el ebook?</div>
+        <div class="faq-a">Inmediatamente después de tu pago recibirás un correo con el enlace de descarga en PDF. Funciona en celular, tablet y computadora.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">¿Las recetas son para cualquier tipo de diabetes?</div>
+        <div class="faq-a">Sí, las 200 recetas están diseñadas para personas con diabetes tipo 1, tipo 2 y prediabetes. Siempre consulta a tu médico sobre tu dieta específica.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">¿Los ingredientes son fáciles de conseguir?</div>
+        <div class="faq-a">Sí, todas las recetas usan ingredientes comunes que encontrás en cualquier supermercado. Sin productos especiales ni costosos.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">¿Y si no me sirve?</div>
+        <div class="faq-a">Tenés 7 días de garantía total. Si no estás satisfecho/a, te devolvemos tu dinero al 100% sin hacer preguntas.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">¿Puedo leerlo desde el celular?</div>
+        <div class="faq-a">Sí, el PDF está optimizado para leerse cómodamente en cualquier dispositivo: celular, tablet o computadora.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="cta-final">
+    <div class="container">
+      <h2>Tu nueva vida con diabetes<br>comienza en la cocina</h2>
+      <p>Más de 2,000 personas ya cambiaron cómo comen. Únete hoy con acceso inmediato.</p>
+      <!-- ⚠️ REEMPLAZÁ el # por tu link de pago -->
+      <a href="#" class="btn-cta-light">🍽️ Sí, quiero mis 200 recetas por $9.99</a>
+      <div class="cta-footer">🛡️ Garantía de 7 días &nbsp;·&nbsp; 🔒 Pago seguro &nbsp;·&nbsp; 📧 Entrega inmediata</div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 · 200 Recetas para Diabéticos · Todos los derechos reservados</p>
+    <p style="margin-top:8px;">
+      <!-- Podés agregar links de política de privacidad y términos acá -->
+      <a href="#">Política de privacidad</a> &nbsp;·&nbsp; <a href="#">Contacto</a>
+    </p>
+  </footer>
+
+</body>
+</html>
